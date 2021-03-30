@@ -17,9 +17,9 @@ func test2() {
 	var m = [...]int{1, 2, 3}
 
 	for i, v := range m {
-		go func() {
+		go func(i,v int) {
 			fmt.Println(i, v)
-		}()
+		}(i,v)
 	}
 
 	time.Sleep(time.Second * 3)
