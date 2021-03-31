@@ -9,7 +9,7 @@ import "fmt"
 	C. 除数为0；
 	D. 调用panic函数；
 
-参考答案：ABD
+参考答案：A B C D
 
  */
 
@@ -34,12 +34,15 @@ func (i User) m2() {
 	fmt.Println("m2")
 }
 
+/**
+	第 26 行代码基于类型 User 创建了新类型 User1，第 27 行代码是创建了 User 的类型别名 User2，注意使用 = 定义类型别名。
+	因为 User2 是别名，完全等价于 User，所以 User2 具有 User 所有的方法。但是 i1.m1() 是不能执行的，因为 User1 没有定义该方法
+ */
 func test2() {
 	var i1 User1
 	var i2 User2
 	i1.m1()
 	i2.m2()
-
 }
 func main() {
 	test1()
