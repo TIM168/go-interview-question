@@ -8,7 +8,8 @@ import "fmt"
  */
 func test1() {
 	one := 0
-	one := 1
+	//one := 1
+	fmt.Println(one)
 }
 
 /**
@@ -18,7 +19,8 @@ func test1() {
 func test2() {
 	x := []int{
 		1,
-		2
+		//2
+		2,
 	}
 	_ = x
 }

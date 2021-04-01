@@ -7,8 +7,8 @@ import "fmt"
 2.cap() 函数适用于数组、数组指针、slice 和 channel，不适用于 map，可以使用 len() 返回 map 的元素个数
  */
 func test1() {
-	m := make(map[string]int, 2)
-	cap(m)
+	//m := make(map[string]int, 2)
+	//cap(m)
 }
 
 /**
@@ -16,8 +16,8 @@ nil 用于表示 interface、函数、maps、slices 和 channels 的“零值”
 如果不指定变量的类型，编译器猜不出变量的具体类型，导致编译错误
  */
 func test2() {
-	var x = nil
-	_ = x
+	//var x = nil
+	//_ = x
 }
 
 
