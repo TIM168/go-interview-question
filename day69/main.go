@@ -21,10 +21,13 @@ var m map[string]int
 m = make(map[string]int)
 m["one"] = 1
 
-
+参考答案及解析：ACD
 */
 
-func test1(x int) (func(), func()) {
+/**
+100 110。知识点：闭包引用相同变量
+ */
+func test(x int) (func(), func()) {
 	return func() {
 			println(x)
 			x += 10
@@ -33,6 +36,12 @@ func test1(x int) (func(), func()) {
 		}
 }
 
+func test1() {
+	a, b := test(100)
+	a()
+	b()
+}
+
 func main() {
-	test1(5)
+	test1()
 }
