@@ -19,21 +19,24 @@ B. false
 func test1() {
 	a := [3]int{0,1,2}
 	s := a[1:2]
-	fmt.Println(s)
+	//fmt.Println(s)
 	fmt.Println(a)
 
 	s[0] = 11
-	fmt.Println(s)
+	//fmt.Println(s)
+	fmt.Println(a)
 
 	s = append(s,12)
-	fmt.Println(s)
+	//fmt.Println(s)
+	fmt.Println(a)
 
 	s = append(s,13)
-	fmt.Println(s)
+	//fmt.Println(s)
+	fmt.Println(a)
 	s[0] = 21
 
 	fmt.Println(a)
-	fmt.Println(s)
+	//fmt.Println(s)
 }
 
 func main() {
