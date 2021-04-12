@@ -31,12 +31,12 @@ func B(len int) int {
 	return len + len
 }
 
-func C(val,default1 string) string {
-	if val == "" {
-		return default
-	}
-	return val
-}
+//func C(val,default1 string) string {
+//	if val == "" {
+//		return default
+//	}
+//	return val
+//}
 
 func main() {
 	test1()
