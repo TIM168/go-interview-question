@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 	"time"
 )
 
@@ -35,13 +36,18 @@ type S struct {
 	v int
 }
 
+
 func test2() {
 	s := []S{{1}, {3}, {5}, {2}}
 	//A
+	sort.Slice(s, func(i, j int) bool {
+		return s[i].v < s[j].v
+	})
 	fmt.Printf("%#v", s)
 
 }
 
 func main() {
-	test1()
+	//test1()
+	test2()
 }
